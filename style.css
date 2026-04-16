@@ -1,116 +1,66 @@
-* {
+body {
 margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
-}
-header {
-background: #333;
-color: white;
-padding: 15px 0;
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(to right, #e6f2ff);
+color: #333;
 }
 
-nav {
-display: flex;
-justify-content: space-between;
+header {
+background-color: #003366;
+color: white;
+text-align: center;
+padding: 30px 20px;
+}
+
+header h1 {
+margin: 0;
+font-size: 36px;
+}
+
+header p {
+font-size: 18px;
+margin-top: 10px;
+}
+
+.image-section {
+text-align: center;
+margin: 30px 0;
+}
+
+.image-section img {
+width: 250px;
+height: 250px;
+border-radius: 50%;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.content {
 width: 80%;
 margin: auto;
-}
-
-.logo {
-font-size: 24px;
-}
-
-.nav-links {
-list-style: none;
-display: flex;
-}
-
-.nav-links li {
-margin-left: 20px;
-}
-
-.nav-links a {
-color: white;
-text-decoration: none;
-}
-.home {
-height: 90vh;
-background: linear-gradient(to right, #4facfe, #00f2fe);
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-color: white;
-}
-
-.home h1 span {
-color: yellow;
-}
-
-.btn {
-display: inline-block;
-margin-top: 15px;
-padding: 10px 20px;
 background: white;
-color: #333;
-text-decoration: none;
-border-radius: 5px;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-section {
-padding: 50px;
-text-align: center;
-}
-.project-container {
-display: flex;
-justify-content: space-around;
+
+.content h2 {
+color: #003366;
 margin-top: 20px;
 }
 
-.card {
-background: #f4f4f4;
-padding: 20px;
-width: 30%;
-border-radius: 10px;
+.content p {
+line-height: 1.6;
+font-size: 16px;
 }
-footer {
-background: #333;
-color: white;
-text-align: center;
-padding: 10px;
-}
-@media (max-width: 768px) {
-nav {
-flex-direction: column;
-align-items: center;
-}
-.nav-links {
-flex-direction: column;
-margin-top: 10px;
-}
-.nav-links li {
-margin: 10px 0;
-}
-.project-container {
-flex-direction: column;
-align-items: center;
-}
-.card {
-width: 80%;
-margin-bottom: 20px;
-}}
-@media (max-width: 480px) {
-.home h1 {
 
-font-size: 22px;
+ul {
+margin-left: 20px;
 }
-.home p {
-font-size: 14px;
-}
-section {
-padding: 30px 15px;
-}
-.card {
-width: 100%;
-}
+
+footer {
+text-align: center;
+background-color: #003366;
+color: white;
+padding: 15px;
+margin-top: 30px;
 }

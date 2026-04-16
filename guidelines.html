@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Guidelines - CyberGuard</title>
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #1e0b3d, #4c1d95, #7c3aed);
+        }
+        .glow {
+            text-shadow: 0 0 40px rgba(167, 139, 250, 0.7);
+        }
+        .guide-card {
+            transition: all 0.5s ease;
+        }
+        .guide-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 30px 40px -15px rgba(124, 58, 237, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-black/80 backdrop-blur-lg fixed w-full z-50 border-b border-violet-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-violet-600 rounded-2xl flex items-center justify-center text-3xl">🛡️</div>
+                <h1 class="text-3xl font-bold tracking-tighter">CyberGuard</h1>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-violet-400 transition">Home</a>
+                <a href="about.html" class="hover:text-violet-400 transition">About</a>
+                <a href="scams.html" class="hover:text-violet-400 transition">Scams</a>
+                <a href="guidelines.html" class="text-violet-400 font-semibold">Guidelines</a>
+                <a href="quiz.html" class="hover:text-violet-400 transition">Quiz</a>
+                <a href="resources.html" class="hover:text-violet-400 transition">Resources</a>
+                <a href="contact.html" class="hover:text-violet-400 transition">Contact</a>
+            </div>
+
+            <div class="flex gap-4">
+                <a href="login.html" class="px-6 py-2.5 border border-violet-400 rounded-full hover:bg-violet-500/10 transition">Login</a>
+                <a href="register.html" class="px-6 py-2.5 bg-violet-600 hover:bg-violet-700 rounded-full font-semibold transition">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[70vh] flex items-center pt-20 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full mb-6">
+                <i class="fas fa-shield-alt text-2xl"></i>
+                <span class="font-bold tracking-widest">YOUR DIGITAL ARMOR</span>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 glow">Master Cyber Safety</h1>
+            <p class="text-2xl text-gray-200 max-w-3xl mx-auto">
+                Simple, powerful, and practical guidelines to protect yourself in the digital world
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6 space-y-16">
+
+            <!-- Card 1 -->
+            <div class="guide-card bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-10 border border-violet-500/30">
+                <div class="flex flex-col md:flex-row items-start gap-8">
+                    <div class="text-7xl flex-shrink-0">🔑</div>
+                    <div class="flex-1">
+                        <h2 class="text-4xl font-bold mb-6">1. Passwords & Authentication</h2>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-emerald-400 font-semibold mb-4">✅ DOs</h4>
+                                <ul class="space-y-3 text-gray-300">
+                                    <li>Use 16+ character strong passwords</li>
+                                    <li>Use a reliable password manager</li>
+                                    <li>Enable 2FA/MFA on all important accounts</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-red-400 font-semibold mb-4">❌ DON'Ts</h4>
+                                <ul class="space-y-3 text-gray-300">
+                                    <li>Never reuse the same password</li>
+                                    <li>Avoid weak passwords like "123456" or "password"</li>
+                                    <li>Never share your password with anyone</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="guide-card bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-10 border border-violet-500/30">
+                <div class="flex flex-col md:flex-row items-start gap-8">
+                    <div class="text-7xl flex-shrink-0">📧</div>
+                    <div class="flex-1">
+                        <h2 class="text-4xl font-bold mb-6">2. Phishing & Social Engineering</h2>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-emerald-400 font-semibold mb-4">Stay Safe By</h4>
+                                <ul class="space-y-3 text-gray-300">
+                                    <li>Always hover over links before clicking</li>
+                                    <li>Never share OTPs or passwords on calls</li>
+                                    <li>Verify urgent requests directly from official sources</li>
+                                </ul>
+                            </div>
+                            <div class="bg-black/40 p-6 rounded-2xl italic">
+                                "If it's urgent and asking for money or details — it's probably a scam."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 & 4 can be added similarly -->
+
+        </div>
+    </section>
+
+    <!-- Myth vs Reality -->
+    <section class="py-20 bg-black">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Myth vs Reality</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-red-900/20 border border-red-500/30 p-8 rounded-3xl">
+                    <h3 class="text-red-400 font-bold mb-3">❌ Myth</h3>
+                    <p class="text-xl">"I'm not famous, no one will target me."</p>
+                </div>
+                <div class="bg-emerald-900/20 border border-emerald-500/30 p-8 rounded-3xl">
+                    <h3 class="text-emerald-400 font-bold mb-3">✅ Reality</h3>
+                    <p class="text-xl">Hackers use automated tools. Everyone is a potential target.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-violet-800 to-fuchsia-700 text-center">
+        <h2 class="text-4xl font-bold mb-6">Knowledge is Your Strongest Firewall</h2>
+        <a href="quiz.html" class="inline-block px-12 py-5 bg-white text-black font-bold text-xl rounded-3xl hover:scale-110 transition">
+            Test Your Cyber Awareness Now →
+        </a>
+    </section>
+
+</body>
+</html>

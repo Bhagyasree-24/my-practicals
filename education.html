@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - CyberGuard</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #1e0b3d, #4c1d95, #7c3aed);
+        }
+        .module-card {
+            transition: all 0.4s ease;
+        }
+        .module-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-black/80 backdrop-blur-lg fixed w-full z-50 border-b border-violet-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-violet-600 rounded-2xl flex items-center justify-center text-3xl">🛡️</div>
+                <h1 class="text-3xl font-bold tracking-tighter">CyberGuard</h1>
+            </div>
+            <a href="index.html" class="hover:text-violet-400">← Home</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-[65vh] flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6">Learn Cyber Safety</h1>
+            <p class="text-2xl text-gray-200 max-w-3xl mx-auto">
+                Master the skills to protect yourself and your family in the digital world
+            </p>
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-6 py-16">
+
+        <!-- Beginner Level -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 flex items-center gap-3">
+                <span class="text-emerald-400">🌱</span> Beginner Level
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-emerald-500/20">
+                    <div class="text-4xl mb-4">🔑</div>
+                    <h3 class="text-xl font-semibold mb-3">Passwords & Authentication</h3>
+                    <p class="text-gray-400">Learn how to create strong passwords and enable 2FA/MFA.</p>
+                </div>
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-emerald-500/20">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h3 class="text-xl font-semibold mb-3">Recognizing Phishing</h3>
+                    <p class="text-gray-400">Identify fake emails, SMS, and calls.</p>
+                </div>
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-emerald-500/20">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-3">Basic Device Security</h3>
+                    <p class="text-gray-400">Update your phone, laptop, and apps regularly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intermediate Level -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 flex items-center gap-3">
+                <span class="text-amber-400">🔥</span> Intermediate Level
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-amber-500/20">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="text-xl font-semibold mb-3">Safe Browsing & Public Wi-Fi</h3>
+                    <p class="text-gray-400">How to stay safe on public networks using VPNs.</p>
+                </div>
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-amber-500/20">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-3">Online Banking & Shopping Safety</h3>
+                    <p class="text-gray-400">Protect your financial information from scams.</p>
+                </div>
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-amber-500/20">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-semibold mb-3">Social Media Privacy</h3>
+                    <p class="text-gray-400">Control what you share and who sees it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Level -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 flex items-center gap-3">
+                <span class="text-red-400">⚡</span> Advanced Topics
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-red-500/20">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-semibold mb-3">Ransomware & Malware Defense</h3>
+                    <p class="text-gray-400">How modern ransomware works and how to recover.</p>
+                </div>
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-red-500/20">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h3 class="text-xl font-semibold mb-3">Deepfake & AI Scams</h3>
+                    <p class="text-gray-400">Recognize AI-generated frauds and voice cloning.</p>
+                </div>
+                <div class="module-card bg-gray-900 rounded-3xl p-8 border border-red-500/20">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="text-xl font-semibold mb-3">Zero Trust & Privacy</h3>
+                    <p class="text-gray-400">Advanced concepts for digital privacy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Resources -->
+        <section>
+            <h2 class="text-4xl font-bold mb-8">Recommended Learning Resources</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="https://tryhackme.com" target="_blank" 
+                   class="bg-gray-900 p-8 rounded-3xl hover:bg-gray-800 transition flex gap-6 items-center">
+                    <div class="text-5xl">🎮</div>
+                    <div>
+                        <h3 class="font-semibold text-xl">TryHackMe</h3>
+                        <p class="text-gray-400">Interactive cybersecurity learning platform</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.coursera.org/learn/cybersecurity-for-everyone" target="_blank" 
+                   class="bg-gray-900 p-8 rounded-3xl hover:bg-gray-800 transition flex gap-6 items-center">
+                    <div class="text-5xl">📚</div>
+                    <div>
+                        <h3 class="font-semibold text-xl">Cybersecurity for Everyone</h3>
+                        <p class="text-gray-400">Free course by University of Maryland</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

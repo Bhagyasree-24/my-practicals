@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CyberGuard</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #1e0b3d, #4c1d95, #6b21a8);
+        }
+        .glow {
+            text-shadow: 0 0 40px rgba(167, 139, 250, 0.7);
+        }
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white">
+
+    <!-- Navbar (Same as Home) -->
+    <nav class="bg-black/80 backdrop-blur-lg border-b border-violet-500/20 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-violet-600 rounded-xl flex items-center justify-center text-2xl">🛡️</div>
+                <h1 class="text-2xl font-bold">CyberGuard</h1>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-violet-400 transition">Home</a>
+                <a href="about.html" class="text-violet-400">About</a>
+                <a href="scams.html" class="hover:text-violet-400 transition">Scams</a>
+                <a href="guidelines.html" class="hover:text-violet-400 transition">Guidelines</a>
+                <a href="quiz.html" class="hover:text-violet-400 transition">Quiz</a>
+                <a href="education.html" class="hover:text-violet-400 transition">Education</a>
+            </div>
+
+            <a href="login.html" class="px-6 py-2.5 bg-violet-600 hover:bg-violet-700 rounded-full font-semibold transition">
+                Sign In
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 glow">
+                About <span class="text-violet-400">CyberGuard</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Empowering people to navigate the digital world safely through awareness, education, and smart protection.
+            </p>
+            
+            <div class="mt-16 flex justify-center gap-6">
+                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-ping"></div>
+                <p class="text-emerald-400 font-medium">Protecting Digital Lives Since 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Cyber Safety -->
+    <section class="py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8">What is <span class="text-violet-400">Cyber Safety</span>?</h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Cyber Safety is the practice of protecting yourself, your data, and your devices from online threats such as hacking, phishing, identity theft, and cyberbullying.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        In today's world, where almost everything is connected to the internet, cyber safety is no longer optional — it's essential.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-violet-900/30 to-purple-900/30 p-10 rounded-3xl border border-violet-500/20">
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="text-5xl">🔐</div>
+                            <div>
+                                <h4 class="font-semibold text-xl">Secure Your Digital Life</h4>
+                                <p class="text-gray-400">Strong passwords, 2FA, and encryption</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-5xl">🧠</div>
+                            <div>
+                                <h4 class="font-semibold text-xl">Stay Aware</h4>
+                                <p class="text-gray-400">Recognize scams and social engineering attacks</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-5xl">🛡️</div>
+                            <div>
+                                <h4 class="font-semibold text-xl">Protect Others</h4>
+                                <p class="text-gray-400">Help your family and community stay safe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Importance Section -->
+    <section class="py-24 bg-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16">Why Cyber Safety Matters</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover border border-transparent hover:border-red-500/50">
+                    <div class="text-6xl mb-6">💰</div>
+                    <h3 class="text-2xl font-semibold mb-3">Financial Devastation</h3>
+                    <p class="text-gray-400">Cybercrime is predicted to cost the world <strong>$10.5 trillion</strong> annually by 2026.</p>
+                </div>
+
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover border border-transparent hover:border-amber-500/50">
+                    <div class="text-6xl mb-6">📈</div>
+                    <h3 class="text-2xl font-semibold mb-3">Rising Threats</h3>
+                    <p class="text-gray-400">AI-powered attacks, ransomware, and deepfake scams are increasing rapidly.</p>
+                </div>
+
+                <div class="bg-gray-900 p-8 rounded-3xl card-hover border border-transparent hover:border-emerald-500/50">
+                    <div class="text-6xl mb-6">🧍‍♂️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Human is the Weakest Link</h3>
+                    <p class="text-gray-400">95% of cyber breaches occur due to human error.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-24 bg-gradient-to-br from-violet-950 to-purple-950">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Our Mission</h2>
+            <p class="text-2xl text-gray-200 leading-relaxed">
+                To make cyber security knowledge accessible, engaging, and actionable for everyone — from students to professionals and senior citizens.
+            </p>
+            <div class="mt-12 text-violet-300 text-xl font-medium">
+                "Knowledge is the best firewall."
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gray-900 text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready to Become Cyber Safe?</h2>
+        <p class="text-gray-400 mb-10">Start your journey today</p>
+        <div class="flex justify-center gap-6">
+            <a href="quiz.html" class="px-10 py-4 bg-violet-600 hover:bg-violet-700 rounded-2xl font-semibold text-lg transition">
+                Take the Safety Quiz
+            </a>
+            <a href="guidelines.html" class="px-10 py-4 border border-violet-400 rounded-2xl font-semibold hover:bg-white/10 transition">
+                Read Guidelines
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>

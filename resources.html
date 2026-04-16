@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - CyberGuard</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-950 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-black/80 backdrop-blur-lg fixed w-full z-50 border-b border-violet-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-violet-600 rounded-2xl flex items-center justify-center text-3xl">🛡️</div>
+                <h1 class="text-3xl font-bold tracking-tighter">CyberGuard</h1>
+            </div>
+            <a href="index.html" class="hover:text-violet-400">← Home</a>
+        </div>
+    </nav>
+
+    <div class="pt-24 pb-16 max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-4">Learning Resources</h1>
+            <p class="text-xl text-gray-400">Expand your Cyber Safety knowledge with questions, tools &amp; materials</p>
+        </div>
+
+        <!-- Practice Questions Section -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 flex items-center gap-3">
+                <i class="fas fa-question-circle text-violet-400"></i> 
+                Self-Assessment Questions (20+)
+            </h2>
+            
+            <div id="questions-list" class="space-y-4"></div>
+        </section>
+
+        <!-- Other Resources -->
+        <div class="grid md:grid-cols-2 gap-10">
+            
+            <!-- Tools & Websites -->
+            <div class="bg-gray-900 rounded-3xl p-8">
+                <h3 class="text-2xl font-semibold mb-6">🔧 Best Free Tools</h3>
+                <ul class="space-y-4">
+                    <li><a href="https://haveibeenpwned.com" target="_blank" class="hover:text-violet-400">Have I Been Pwned</a> - Check if your email was leaked</li>
+                    <li><a href="https://www.virustotal.com" target="_blank" class="hover:text-violet-400">VirusTotal</a> - Scan files & links</li>
+                    <li><a href="https://www.browserling.com" target="_blank" class="hover:text-violet-400">Browserling</a> - Test suspicious links safely</li>
+                    <li><a href="https://passwords.google.com" target="_blank" class="hover:text-violet-400">Google Password Manager</a></li>
+                </ul>
+            </div>
+
+            <!-- Learning Links -->
+            <div class="bg-gray-900 rounded-3xl p-8">
+                <h3 class="text-2xl font-semibold mb-6">📚 Best Learning Resources</h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li><a href="https://www.cybrary.it" target="_blank" class="hover:text-violet-400">Cybrary</a> - Free cybersecurity courses</li>
+                    <li><a href="https://tryhackme.com" target="_blank" class="hover:text-violet-400">TryHackMe</a> - Hands-on learning</li>
+                    <li><a href="https://www.khanacademy.org" target="_blank" class="hover:text-violet-400">Khan Academy</a> - Internet Safety</li>
+                    <li><a href="https://www.cisa.gov" target="_blank" class="hover:text-violet-400">CISA Cybersecurity Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            { q: "What is the difference between 2FA and MFA?", a: "2FA uses exactly two factors, while MFA can use two or more factors." },
+            { q: "What does 'Phishing as a Service (PhaaS)' mean?", a: "Cybercriminals sell ready-made phishing kits and infrastructure to other attackers." },
+            { q: "Why is 'Passkey' considered better than traditional passwords?", a: "It uses public-key cryptography and is resistant to phishing." },
+            { q: "What is a ' watering hole attack'?", a: "Attacking websites that victims frequently visit to infect them." },
+            { q: "What does 'DNS Tunneling' allow attackers to do?", a: "Bypass firewalls by hiding malicious traffic inside DNS queries." },
+            { q: "What is the recommended length for a strong passphrase?", a: "At least 20 characters using random words." },
+            { q: "What is 'SIM Swapping'?", a: "Attacker convinces mobile carrier to transfer victim's phone number to their SIM." },
+            { q: "Why should you avoid using public USB charging stations?", a: "They can be modified to install malware (juice jacking)." },
+            { q: "What is the best defense against ransomware?", a: "Regular offline backups + keeping software updated." },
+            { q: "What does 'Social Engineering' primarily exploit?", a: "Human psychology and trust rather than technical vulnerabilities." },
+            { q: "What is the purpose of a 'Honeypot'?", a: "To attract and study attackers by acting as a decoy system." },
+            { q: "What is the risk of clicking 'Allow Notifications' on suspicious websites?", a: "It can be used for browser-based scams and push notification phishing." }
+        ];
+
+        const container = document.getElementById("questions-list");
+
+        questions.forEach((item, index) => {
+            const div = document.createElement("div");
+            div.className = "bg-gray-900 rounded-2xl p-6 border border-gray-700 hover:border-violet-500 transition cursor-pointer";
+            div.innerHTML = `
+                <div class="flex justify-between items-center">
+                    <p class="font-medium">${item.q}</p>
+                    <i class="fas fa-chevron-down text-violet-400"></i>
+                </div>
+                <p class="hidden mt-4 text-gray-300 answer">${item.a}</p>
+            `;
+            div.onclick = () => {
+                const answer = div.querySelector(".answer");
+                answer.classList.toggle("hidden");
+            };
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>

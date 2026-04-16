@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Scams - CyberGuard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #4c1d95, #7c3aed, #b91c1c);
+        }
+        .scam-card {
+            transition: all 0.4s ease;
+        }
+        .scam-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px -12px rgba(185, 28, 28, 0.4);
+        }
+        .warning-badge {
+            background: linear-gradient(90deg, #f59e0b, #ef4444);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-black/80 backdrop-blur-lg fixed w-full z-50 border-b border-violet-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-violet-600 rounded-2xl flex items-center justify-center text-3xl">🛡️</div>
+                <h1 class="text-3xl font-bold tracking-tighter">CyberGuard</h1>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-violet-400 transition">Home</a>
+                <a href="about.html" class="hover:text-violet-400 transition">About</a>
+                <a href="scams.html" class="text-red-400 font-semibold">Common Scams</a>
+                <a href="guidelines.html" class="hover:text-violet-400 transition">Guidelines</a>
+                <a href="quiz.html" class="hover:text-violet-400 transition">Quiz</a>
+                <a href="resources.html" class="hover:text-violet-400 transition">Resources</a>
+            </div>
+
+            <div class="flex gap-4">
+                <a href="login.html" class="px-6 py-2.5 border border-violet-400 rounded-full hover:bg-violet-500/10 transition">Login</a>
+                <a href="register.html" class="px-6 py-2.5 bg-violet-600 hover:bg-violet-700 rounded-full font-semibold transition">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[70vh] flex items-center pt-20 relative">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full mb-8">
+                <span class="text-3xl">⚠️</span>
+                <span class="font-semibold tracking-wider">KNOW THE DANGER</span>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-bold mb-6">Common Cyber Scams</h1>
+            <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+                Stay one step ahead. Learn how scammers operate and how to protect yourself.
+            </p>
+        </div>
+    </section>
+
+    <!-- Scams Grid -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Most Common Scams in 2026</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Scam Card 1 -->
+                <div class="scam-card bg-gray-800 border border-red-500/30 rounded-3xl p-8 hover:border-red-500">
+                    <div class="text-5xl mb-6">📧</div>
+                    <h3 class="text-2xl font-semibold mb-3">Phishing Attacks</h3>
+                    <p class="text-gray-400 mb-6">
+                        Fake emails, SMS, or calls pretending to be from banks, Amazon, or government to steal your login details.
+                    </p>
+                    <div class="warning-badge text-white text-xs px-4 py-2 rounded-full inline-block">
+                        Most Common Scam
+                    </div>
+                    <ul class="mt-6 text-sm space-y-2 text-gray-300">
+                        <li>✅ Check URL before clicking</li>
+                        <li>✅ Never share OTP via call</li>
+                    </ul>
+                </div>
+
+                <!-- Scam Card 2 -->
+                <div class="scam-card bg-gray-800 border border-red-500/30 rounded-3xl p-8 hover:border-red-500">
+                    <div class="text-5xl mb-6">💰</div>
+                    <h3 class="text-2xl font-semibold mb-3">Investment / Crypto Scams</h3>
+                    <p class="text-gray-400 mb-6">
+                        Promises of high returns in cryptocurrency, trading, or fake investment platforms.
+                    </p>
+                    <ul class="mt-6 text-sm space-y-2 text-gray-300">
+                        <li>✅ Too good to be true = Scam</li>
+                        <li>✅ Verify platform legitimacy</li>
+                    </ul>
+                </div>
+
+                <!-- Scam Card 3 -->
+                <div class="scam-card bg-gray-800 border border-red-500/30 rounded-3xl p-8 hover:border-red-500">
+                    <div class="text-5xl mb-6">🛒</div>
+                    <h3 class="text-2xl font-semibold mb-3">Fake Online Shopping</h3>
+                    <p class="text-gray-400 mb-6">
+                        Extremely cheap offers on luxury items leading to fake websites that steal card details.
+                    </p>
+                    <ul class="mt-6 text-sm space-y-2 text-gray-300">
+                        <li>✅ Use trusted platforms only</li>
+                        <li>✅ Check seller ratings</li>
+                    </ul>
+                </div>
+
+                <!-- Scam Card 4 -->
+                <div class="scam-card bg-gray-800 border border-red-500/30 rounded-3xl p-8 hover:border-red-500">
+                    <div class="text-5xl mb-6">💻</div>
+                    <h3 class="text-2xl font-semibold mb-3">Tech Support Scam</h3>
+                    <p class="text-gray-400 mb-6">
+                        Pop-ups or calls claiming your computer is infected and demanding remote access.
+                    </p>
+                    <ul class="mt-6 text-sm space-y-2 text-gray-300">
+                        <li>✅ Never allow remote access</li>
+                        <li>✅ Hang up and verify directly</li>
+                    </ul>
+                </div>
+
+                <!-- Scam Card 5 -->
+                <div class="scam-card bg-gray-800 border border-red-500/30 rounded-3xl p-8 hover:border-red-500">
+                    <div class="text-5xl mb-6">❤️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Romance Scams</h3>
+                    <p class="text-gray-400 mb-6">
+                        Fake profiles build emotional relationships and later ask for money.
+                    </p>
+                    <ul class="mt-6 text-sm space-y-2 text-gray-300">
+                        <li>✅ Never send money to online partners</li>
+                    </ul>
+                </div>
+
+                <!-- Scam Card 6 -->
+                <div class="scam-card bg-gray-800 border border-red-500/30 rounded-3xl p-8 hover:border-red-500">
+                    <div class="text-5xl mb-6">🔒</div>
+                    <h3 class="text-2xl font-semibold mb-3">Ransomware</h3>
+                    <p class="text-gray-400 mb-6">
+                        Malicious software that locks your files and demands payment to unlock them.
+                    </p>
+                    <ul class="mt-6 text-sm space-y-2 text-gray-300">
+                        <li>✅ Always backup important files</li>
+                        <li>✅ Keep antivirus updated</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning Banner -->
+    <section class="py-12 bg-red-900/30 border-t border-b border-red-500/50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-red-400 font-semibold text-lg">
+                🔥 Remember: If it sounds too good to be true, it probably is a scam.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard Quiz - Test Your Skills</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-black/80 backdrop-blur-lg fixed w-full z-50 border-b border-violet-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-violet-600 rounded-2xl flex items-center justify-center text-3xl">🛡️</div>
+                <h1 class="text-3xl font-bold">CyberGuard</h1>
+            </div>
+            <a href="index.html" class="hover:text-violet-400">← Home</a>
+        </div>
+    </nav>
+
+    <div class="pt-24 max-w-4xl mx-auto px-6 pb-16">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-3">Advanced Cyber Security Quiz</h1>
+            <p class="text-xl text-gray-400">15 Challenging Questions • Expert Level</p>
+        </div>
+
+        <div id="quiz-container" class="bg-gray-900 rounded-3xl p-10 shadow-2xl border border-violet-500/30">
+            <div class="mb-8 flex justify-between items-center">
+                <span class="text-sm">Question <span id="current-q" class="font-bold text-violet-400">1</span>/15</span>
+                <span id="score-display" class="text-sm font-medium">Score: <span id="score">0</span>/150</span>
+            </div>
+
+            <div class="h-2 bg-gray-800 rounded-full mb-10">
+                <div id="progress" class="h-full bg-gradient-to-r from-violet-500 to-fuchsia-500 w-[6.66%] rounded-full transition-all duration-300"></div>
+            </div>
+
+            <h2 id="question" class="text-2xl font-semibold leading-relaxed mb-10"></h2>
+            
+            <div id="options" class="space-y-4"></div>
+
+            <div id="feedback" class="hidden mt-8 p-6 rounded-2xl"></div>
+
+            <div class="flex justify-between mt-10">
+                <button id="prev" class="px-8 py-3 bg-gray-800 rounded-2xl hover:bg-gray-700 transition hidden">Previous</button>
+                <button id="next" class="px-10 py-3 bg-violet-600 hover:bg-violet-700 rounded-2xl font-semibold transition">Next Question</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result" class="hidden text-center py-16">
+            <h2 class="text-5xl font-bold mb-6">Quiz Completed!</h2>
+            <div id="final-score" class="text-8xl font-bold text-violet-400 mb-4"></div>
+            <p id="message" class="text-2xl mb-10"></p>
+            
+            <div class="flex justify-center gap-6">
+                <button onclick="restartQuiz()" 
+                        class="px-10 py-4 bg-white text-black font-bold rounded-3xl hover:scale-105 transition">
+                    Restart Quiz
+                </button>
+                <a href="resources.html" 
+                   class="px-10 py-4 border border-violet-400 rounded-3xl font-semibold hover:bg-violet-500/10 transition flex items-center gap-2">
+                    <i class="fas fa-book"></i> Explore 50+ More Questions
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

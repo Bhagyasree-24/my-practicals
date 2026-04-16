@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration</title>
+
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fa7fe2;
+}
+
+.container {
+    width: 600px;
+    margin: 40px auto;
+    background: #daf56e;
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+.gender input {
+    width: auto;
+}
+
+.buttons {
+    text-align: center;
+    padding-top: 15px;
+}
+
+button {
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+
+    <form action="#" method="post">
+
+        <table>
+            <tr>
+                <td>Student Name</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+
+            <tr>
+                <td>Roll Number</td>
+                <td><input type="text" name="rollno" required></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="tel" name="mobile" pattern="[0-9]{10}" required></td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td class="gender">
+                    <input type="radio" name="gender" value="Male" required> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td>Department</td>
+                <td>
+                    <select name="department" required>
+                        <option value="">-- Select --</option>
+                        <option>CSE</option>
+                        <option>CSE - Cyber Security</option>
+                        <option>IT</option>
+                        <option>ECE</option>
+                        <option>Mechanical</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Semester</td>
+                <td>
+                    <select name="semester" required>
+                        <option value="">-- Select --</option>
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                        <option>V</option>
+                        <option>VI</option>
+                        <option>VII</option>
+                        <option>VIII</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td>
+                    <textarea name="address" rows="3" required></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="confirm_password" required></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="buttons">
+                    <button type="submit">Register</button>
+                    <button type="reset">Clear</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+</body>
+</html>

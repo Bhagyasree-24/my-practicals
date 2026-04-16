@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App (Easy & Explained)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-blue-200 to-purple-300 min-h-screen flex items-center justify-center">
+
+<!-- Main Container -->
+<div class="bg-white p-6 rounded-xl shadow-xl w-full max-w-md">
+  <h2 class="text-2xl font-bold text-center mb-2">🧠 Quiz App</h2>
+
+  <!-- Shows question number -->
+  <p id="progress" class="text-center text-gray-600 mb-4"></p>
+
+  <!-- Quiz Section -->
+  <div id="quiz-box">
+    <h3 id="question" class="text-lg font-semibold mb-4"></h3>
+
+    <!-- Options will appear here -->
+    <div id="answers" class="space-y-2"></div>
+
+    <!-- Next Button -->
+    <button id="nextBtn" class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hidden">
+      Next
+    </button>
+  </div>
+
+  <!-- Result Section -->
+  <div id="result" class="hidden text-center">
+    <h3 class="text-xl font-bold mb-3">🎉 Quiz Completed!</h3>
+    <p id="scoreText" class="mb-3"></p>
+
+    <!-- Wrong answers will be shown here -->
+    <div id="wrongAnswers" class="text-left text-sm"></div>
+
+    <button onclick="location.reload()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg">
+      Restart
+    </button>
+  </div>
+</div>
+
+<script>
+
+// ================= QUIZ DATA =================
+// You can add more questions here easily
+const quizData = [
+  {
+    question: "What is the capital of India?",
+    options: ["Mumbai", "Delhi", "Kolkata", "Chennai"],
+    correct: 1
+  },
+  {
+    question: "Which language is used for web apps?",
+    options: ["Python", "Java", "JavaScript", "C++"],
+    correct: 2
+  },
+  {
+    question: "What does HTML stand for?",
+    options: ["Hyper Text Markup Language", "High Text Machine Language", "None"],
+    correct: 0
+  },
+  {
+    question: "Which company developed Java?",
+    options: ["Microsoft", "Sun Microsystems", "Google", "Apple"],
+    correct: 1
+  }
+];
+
+// ============== VARIABLES ==============
+let currentQ = 0;   // current question index
+let score = 0;      // user score
+let wrongList = []; // store wrong answers
+
+// ============== HTML ELEMENTS ==============
+const questionEl = document.getElementById("question");
+const answersEl = document.getElementById("answers");
+const nextBtn = document.getElementById("nextBtn");
+const resultBox = document.getElementById("result");
+const quizBox = document.getElementById("quiz-box");
+const scoreText = document.getElementById("scoreText");
+const progress = document.getElementById("progress");
+const wrongAnswersDiv = document.getElementById("wrongAnswers");
+
+// ============== LOAD QUESTION ==============
+function loadQuestion() {
+  nextBtn.classList.add("hidden");
+  answersEl.innerHTML = ""; // clear old options
+
+  let q = quizData[currentQ];
+  questionEl.textContent = q.question;
+
+  // show question number
+  progress.textContent = `Question ${currentQ + 1} of ${quizData.length}`;
+
+  // create buttons for options
+  q.options.forEach((opt, index) => {
+    let btn = document.createElement("button");
+    btn.textContent = opt;
+    btn.className = "w-full bg-gray-100 hover:bg-blue-100 p-2 rounded";
+    btn.onclick = () => selectAnswer(index, btn);
+    answersEl.appendChild(btn);
+  });
+}
+
+// ============== CHECK ANSWER ==============
+function selectAnswer(index, btn) {
+  let correct = quizData[currentQ].correct;
+
+  // disable all buttons after clicking
+  let buttons = answersEl.querySelectorAll("button");
+  buttons.forEach(b => b.disabled = true);
+
+  if(index === correct) {
+    score++;
+    btn.classList.add("bg-green-300");
+  } else {
+    btn.classList.add("bg-red-300");
+
+    // store wrong answer
+    wrongList.push({
+      question: quizData[currentQ].question,
+      correctAnswer: quizData[currentQ].options[correct]
+    });
+
+    // show correct answer
+    buttons[correct].classList.add("bg-green-300");
+  }
+
+  nextBtn.classList.remove("hidden");
+}
+
+// ============== NEXT BUTTON ==============
+nextBtn.onclick = () => {
+  currentQ++;
+
+  if(currentQ < quizData.length) {
+    loadQuestion();
+  } else {
+    showResult();
+  }
+};
+
+// ============== SHOW RESULT ==============
+function showResult() {
+  quizBox.classList.add("hidden");
+  resultBox.classList.remove("hidden");
+
+  scoreText.textContent = `Your Score: ${score} / ${quizData.length}`;
+
+  // show wrong answers
+  if(wrongList.length > 0) {
+    wrongAnswersDiv.innerHTML = "<h4 class='font-bold mb-2'>❌ Wrong Answers:</h4>";
+
+    wrongList.forEach(item => {
+      wrongAnswersDiv.innerHTML += `
+        <p>• ${item.question}</p>
+        <p class='text-green-600'>Correct: ${item.correctAnswer}</p><br>
+      `;
+    });
+
+  } else {
+    wrongAnswersDiv.innerHTML = "<p class='text-green-600'>All answers correct! 🎉</p>";
+  }
+}
+
+// start quiz
+loadQuestion();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VFX Employee Registration</title>
+
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.container {
+    width: 700px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #05e3ba, #f0f9ff);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    padding: 25px;
+}
+
+h2 {
+    text-align: center;
+    color: #0b3c5d;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+label {
+    font-weight: bold;
+    color: #1f3c88;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 6px;
+    border: 1px solid #b3d9ff;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 6px rgba(0,188,212,0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+.skills input {
+    width: auto;
+    margin-right: 5px;
+}
+
+.buttons {
+    text-align: center;
+    padding-top: 20px;
+}
+
+button {
+    padding: 10px 28px;
+    font-size: 15px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: #fff;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(221,36,118,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2> VFX Employee Registration Form</h2>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <table>
+
+            <tr>
+                <td><label>Full Name</label></td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Email ID</label></td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Mobile Number</label></td>
+                <td><input type="tel" name="mobile" pattern="[0-9]{10}" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Date of Birth</label></td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" value="Male" required> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Designation</label></td>
+                <td>
+                    <select name="designation" required>
+                        <option value="">-- Select Role --</option>
+                        <option>VFX Artist</option>
+                        <option>3D Modeler</option>
+                        <option>Compositor</option>
+                        <option>Motion Graphics Designer</option>
+                        <option>Lighting Artist</option>
+                        <option>FX Artist</option>
+                        <option>Roto Artist</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Primary Software</label></td>
+                <td>
+                    <select name="software" required>
+                        <option value="">-- Select --</option>
+                        <option>Maya</option>
+                        <option>Blender</option>
+                        <option>Nuke</option>
+                        <option>After Effects</option>
+                        <option>Houdini</option>
+                        <option>ZBrush</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Skills</label></td>
+                <td class="skills">
+                    <input type="checkbox"> Modeling
+                    <input type="checkbox"> Texturing
+                    <input type="checkbox"> Rigging
+                    <input type="checkbox"> Animation
+                    <input type="checkbox"> Compositing
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Experience (Years)</label></td>
+                <td><input type="number" min="0" max="40" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Portfolio Link</label></td>
+                <td><input type="url"></td>
+            </tr>
+
+            <tr>
+                <td><label>Upload Resume</label></td>
+                <td><input type="file" accept=".pdf,.doc,.docx"></td>
+            </tr>
+
+            <tr>
+                <td><label>About Yourself</label></td>
+                <td><textarea rows="3"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label>Create Password</label></td>
+                <td><input type="password" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Confirm Password</label></td>
+                <td><input type="password" required></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="buttons">
+                    <button type="submit">Register</button>
+                    <button type="reset" style="margin-left:10px;background:linear-gradient(135deg,#36d1dc,#5b86e5);">
+                        Reset
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+</div>
+
+</body>
+</html>

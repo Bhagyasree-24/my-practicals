@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+
+<style>
+body {
+    background: #f4f4f4;
+    font-family: Arial;
+}
+.header {
+    background: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+.steps {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    align-items: center;
+}
+
+.step {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #ddd;
+    line-height: 35px;
+    color: #000;
+}
+
+.active {
+    background: #8bc34a;
+    color: white;
+}
+
+.line {
+    width: 100px;
+    height: 3px;
+    background: #8bc34a;
+}
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+.order-box {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+}
+.btn-order {
+    background: #8a6d3b;
+    color: white;
+}
+.btn-order:hover {
+    background: #6e552c;
+}
+.small-text {
+    font-size: 14px;
+    color: gray;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+    INFINITE CBD - CHECKOUT
+</div>
+<div class="steps">
+    <div class="step">
+        <div class="circle active">1</div>
+        <small>Your Cart</small>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="step">
+        <div class="circle active">2</div>
+        <small>Checkout</small>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="step">
+        <div class="circle">3</div>
+        <small>Complete</small>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-md-7">
+<div class="box">
+
+<p class="small-text">Returning customer? Click here to login</p>
+<p class="small-text">Have a coupon? Click here to enter your code</p>
+
+<form>
+
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <label>First name *</label>
+        <input type="text" class="form-control">
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <label>Last name *</label>
+        <input type="text" class="form-control">
+    </div>
+</div>
+
+<div class="mb-3">
+    <label>Company name (optional)</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="mb-3">
+    <label>Country *</label>
+    <select class="form-control">
+        <option>Select country</option>
+        <option>India</option>
+        <option>USA</option>
+        <option>Africa</option>
+        <option>Indonesia</option>
+    </select>
+</div>
+
+<div class="mb-3">
+    <label>Street address *</label>
+    <input type="text" class="form-control mb-2" placeholder="House number and street">
+    <input type="text" class="form-control" placeholder="Apartment, suite (optional)">
+</div>
+
+<div class="mb-3">
+    <label>Town / City *</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="mb-3">
+    <label>State *</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="mb-3">
+    <label>Postcode / ZIP *</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="mb-3">
+    <label>Phone *</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="mb-3">
+    <label>Email *</label>
+    <input type="email" class="form-control">
+</div>
+
+</form>
+</div>
+</div>
+<div class="col-md-5">
+<div class="order-box">
+
+<h5>Your Order</h5>
+<hr>
+
+<p>Gummies × 2</p>
+<p>Strength: 200mg</p>
+
+<hr>
+
+<p>Subtotal: $60.00</p>
+<p>Coupon: -$12.00</p>
+<p>Shipping: Free</p>
+
+<hr>
+
+<h5>Total: $48.00</h5>
+
+<hr>
+
+<h6>Payment</h6>
+
+<input type="text" class="form-control mb-3" placeholder="Card Number">
+
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <input type="text" class="form-control" placeholder="MM/YY">
+    </div>
+    <div class="col-md-6 mb-3">
+        <input type="text" class="form-control" placeholder="CVV">
+    </div>
+</div>
+
+<div class="form-check mb-3">
+    <input type="checkbox" class="form-check-input">
+    <label>I agree to terms</label>
+</div>
+
+<button class="btn btn-order w-100">Place Order</button>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
